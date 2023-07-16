@@ -1,8 +1,10 @@
 name: CI pipeline.
 on:
   workflow_dispatch:
-    branches:
-      - feature/ci
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,3 +15,6 @@ jobs:
         run: |
           ls -ali
           echo ${{ github.workspace }}
+      - name: 'Output deployment environment'
+        run: |
+          echo ${{ github.events.inputs.environment }}
