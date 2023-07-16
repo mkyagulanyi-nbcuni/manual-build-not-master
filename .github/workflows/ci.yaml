@@ -1,4 +1,4 @@
-name: CI
+name: CI pipeline
 on:
   workflow_dispatch:
     branches:
