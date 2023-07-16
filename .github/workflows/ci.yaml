@@ -3,7 +3,6 @@ on:
   workflow_dispatch:
     branches:
       - feature/ci
-  push:
 jobs:
   build:
     runs-on: ubuntu-latest
