@@ -5,6 +5,7 @@ on:
       environment:
         description: 'Deployment environment'
         required: true
+  push:
 jobs:
   build:
     runs-on: ubuntu-latest
