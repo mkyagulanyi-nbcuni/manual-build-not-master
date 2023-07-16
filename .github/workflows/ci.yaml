@@ -1,0 +1,15 @@
+name: CI pipeline.
+on:
+  workflow_dispatch:
+    branches:
+      - feature/ci
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo code to VM
+        uses: actions/checkout@v3
+      - name: List directory content
+        run: |
+          ls -ali
+          echo ${{ github.workspace }}
